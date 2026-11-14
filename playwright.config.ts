@@ -1,6 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { existsSync } from 'node:fs';
 import { loadEnvFile } from 'node:process';
+import { baseURL } from './test-env';
 
 if (existsSync('.env.local')) {
   loadEnvFile('.env.local');
@@ -8,7 +9,7 @@ if (existsSync('.env.local')) {
 export default defineConfig({
   testDir: './tests',
   use: {
-    baseURL: 'http://localhost:8065',
+    baseURL: baseURL,
   },
   projects: [
     {

@@ -1,0 +1,13 @@
+{
+  "name": "playwright-tests",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:roles": "playwright test tests/roles.spec.ts --headed",
+    "test:messages": "playwright test tests/messages.spec.ts --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "^26.6.6"
+  }
+}
